@@ -26,7 +26,8 @@ function TeacherLogin(){
             alert("invalid email id..It should be in this format '------@teacher.schoolname.ac.in' "-" indicates a digit from 0 to 9  ")
            }
            else{
-          Axios.post("http://localhost:4500/teacherLogin",{
+        //   Axios.post("http://localhost:4500/teacherLogin",{
+            Axios.post("/teacherLogin",{
              id:id,
              password:password
             

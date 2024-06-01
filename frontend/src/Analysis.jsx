@@ -16,7 +16,7 @@ function Analysis(){
         const subject=document.getElementById("subject").value;
         
          
-        Axios.post("http://localhost:4500/getMarks",{
+        Axios.post("/getMarks",{
             Class:Class,
             section:section,
             exam:exam,

@@ -16,7 +16,7 @@ function EditMarks(){
      const exam=document.getElementById("exam").value;
      
       
-     Axios.post("http://localhost:4500/displayMarks",{
+     Axios.post("/displayMarks",{
          Class:Class,
          section:section,
          exam:exam

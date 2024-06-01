@@ -9,7 +9,7 @@ function RankList(){
         const Class=document.getElementById("class").value;
         const section=document.getElementById("section").value;
         const exam=document.getElementById("exam").value;
-        Axios.post("http://localhost:4500/getRankList",{
+        Axios.post("/getRankList",{
             Class:Class,
             section:section,
             exam:exam

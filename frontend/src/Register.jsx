@@ -22,7 +22,7 @@ function Register(){
           rollno:""
          })
 
-          Axios.post("http://localhost:4500/",{
+          Axios.post("/",{
             Name:name,
             rollno:rollno,
             Class:classDetails.Class,

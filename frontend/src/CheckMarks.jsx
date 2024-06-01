@@ -10,7 +10,7 @@ function CheckMarks(){
         const Class=document.getElementById("Class").value;
         const section=document.getElementById("section").value;
 
-        Axios.post("http://localhost:4500/checkMarks",{
+        Axios.post("/checkMarks",{
             RollNo:rollno,
             Class:Class,
             section:section
