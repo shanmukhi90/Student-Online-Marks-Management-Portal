@@ -12,6 +12,7 @@ import RankList from "./RankList";
 import "../src/index.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChild, faPersonChalkboard } from '@fortawesome/free-solid-svg-icons';
+import DeleteStudent from "./DeleteStudent";
 
 
 function App() {
@@ -38,6 +39,7 @@ const isEditPage=location.pathname ==="/Teacher/EditMarks";
 const isAnalysisPage=location.pathname ==="/Teacher/Analysis";
 const isCheckMarksPage=location.pathname ==="/Student/CheckMarks";
 const isRankListPage=location.pathname==="/RankList";
+const isDeletePage=location.pathname==="/Teacher/DeleteStudent"
 
 
    return (
@@ -49,7 +51,7 @@ const isRankListPage=location.pathname==="/RankList";
         </nav>
 
           {
-          isTeacherPage || isStudentPage || isRegisterPage || isAnalysisPage || isEditPage||isEnterPage ||isCheckMarksPage || isTeacherLoginPage || isRankListPage ? null : 
+          isTeacherPage || isStudentPage || isDeletePage || isRegisterPage || isAnalysisPage || isEditPage||isEnterPage ||isCheckMarksPage || isTeacherLoginPage || isRankListPage ? null : 
           <div className="Home">
             <button className="iconButtons" onClick={handleTeacher}> <FontAwesomeIcon className="icon" icon={ faPersonChalkboard } /> <h4>Teacher</h4> </button>
           <button className="iconButtons" onClick={handleStudent}><FontAwesomeIcon className="icon" icon={faChild} /><h4>Student</h4></button> 
@@ -63,6 +65,7 @@ const isRankListPage=location.pathname==="/RankList";
         <Route path="/Teacher/EnterMarks" element={<EnterMarks />} />
         <Route path="/Teacher/EditMarks" element={<EditMarks />} />
         <Route path="/Teacher/Analysis" element={<Analysis />} />
+        <Route path="/Teacher/DeleteStudent" element={<DeleteStudent />} />
         <Route path="/Teacher/Home" element={<Teacher />} />
         <Route path="/RankList" element={<RankList />} />
         <Route path="/Student/CheckMarks" element={<CheckMarks />} />

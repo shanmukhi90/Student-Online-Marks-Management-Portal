@@ -6,8 +6,9 @@ import EditMarks from "./EditMarks";
 import Analysis from "./Analysis";
 import "../src/index.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faUserPlus,faPenToSquare, faMagnifyingGlassChart, faListOl} from "@fortawesome/free-solid-svg-icons";
+import {faUserPlus,faPenToSquare, faMagnifyingGlassChart, faListOl,faTrash} from "@fortawesome/free-solid-svg-icons";
 import RankList from "./RankList";
+import DeleteStudent from "./DeleteStudent";
 
 function Teacher(){
     const navigate=useNavigate();
@@ -32,6 +33,9 @@ function Teacher(){
     function handleRankList(){
         navigate("/RankList");
     }
+    function handleDelete(){
+        navigate("/Teacher/DeleteStudent")
+    }
    return(
     <div className="Teacher-page">
         <button className="iconButtons" onClick={handleRegistering}>
@@ -49,6 +53,9 @@ function Teacher(){
         <button className="iconButtons" onClick={handleRankList}>
         <FontAwesomeIcon className="icon" icon={faListOl} />
             <h4>view RankList</h4></button>
+            <button className="iconButtons" onClick={handleDelete}>
+        <FontAwesomeIcon className="icon" icon={faTrash} />
+            <h4>Delete Students</h4></button>
         
 
         <Routes>
@@ -56,6 +63,7 @@ function Teacher(){
         <Route path="/Teacher/EnterMarks" element={<EnterMarks />} />
         <Route path="/Teacher/EditMarks" element={<EditMarks />} />
         <Route path="/Teacher/Analysis" element={<Analysis />} />
+        <Route path="/Teacher/DeleteStudent" element={<DeleteStudent />} />
         <Route path="/RankList" element={<RankList />} />
     </Routes>
     </div>

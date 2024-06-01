@@ -53,7 +53,7 @@ function Register(){
       // const Class=document.getElementById("class").value;
       // const section=document.getElementById("section").value;
       
-      Axios.post("http://localhost:4500/selectClass",{
+      Axios.post("/selectClass",{
             Class:classDetails.Class,
             section:classDetails.section
           }).then((res)=>{
