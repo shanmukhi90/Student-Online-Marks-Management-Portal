@@ -58,7 +58,7 @@ function EditMarks(){
      biology=bflag?studentupdatedmarks.Biology:Biology;
      social=sflag?studentupdatedmarks.Social:Social;
     
-     Axios.post("http://localhost:4500/editMarks",{
+     Axios.post("/editMarks",{
             name:name,
             rollno:rollno,
             Telugu:telugu,
