@@ -91,6 +91,18 @@ async function main(){
           IsTeacherExists(res,id,password);
           
         })
+
+        app.post("/delete",async (req,res)=>{
+          Class=req.body.Class;
+          section=req.body.section;
+          const del=await StudentInfo.findOneAndDelete({class:Class,section:section});
+          const del2=await StudentMark.findOneAndDelete({class:Class,section:section});
+          if(del && del2){
+            res.send("Deleted Students");
+          }else{
+            res.send("Error in deletion Check whether students exists or not");
+          }
+        })
         
     
    var isClassExists;
