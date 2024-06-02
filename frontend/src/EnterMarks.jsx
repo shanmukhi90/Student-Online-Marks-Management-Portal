@@ -18,7 +18,7 @@ function handleSelect(event){
     const exam=document.getElementById("exam").value;
     
      
-    Axios.post("http://localhost:4500/displayNames",{
+    Axios.post("/displayNames",{
         Class:Class,
         section:section,
         exam:exam
@@ -43,7 +43,7 @@ function handleSelect(event){
 
 function  handleSubmit(name, rollno){
 
-    Axios.post("http://localhost:4500/enterMarks",{
+    Axios.post("/enterMarks",{
            name:name,
            rollno:rollno,
            Telugu:input.Telugu,

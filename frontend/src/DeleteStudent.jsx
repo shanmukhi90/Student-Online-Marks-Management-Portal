@@ -10,7 +10,7 @@ function DeleteStudent() {
        
         
          
-        Axios.post("http://localhost:4500/delete",{
+        Axios.post("/delete",{
             Class:Class,
             section:section,
             
